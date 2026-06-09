@@ -34,7 +34,7 @@ export function Header() {
           </Link>
         </Container>
       </div>
-      <Container className="flex min-h-22 items-center justify-between py-4">
+      <Container className="flex min-h-22 items-center justify-between gap-8 py-4">
         <Link href="/" className="flex items-center gap-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-600">
           <BrandLogo imageClassName="h-12 w-12 sm:h-16 sm:w-16" className="min-h-12 sm:min-h-16" />
           <span>
@@ -46,7 +46,7 @@ export function Header() {
             </span>
           </span>
         </Link>
-        <nav className="hidden items-center gap-8 text-sm font-semibold text-silver-100 xl:flex" aria-label="Main navigation">
+        <nav className="hidden flex-1 items-center justify-center gap-8 text-sm font-semibold text-silver-100 xl:flex" aria-label="Main navigation">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className="group relative hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-400">
               {item.label}
@@ -54,13 +54,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center gap-3 lg:flex">
-          <Link href={business.phoneHref} className="inline-flex items-center gap-2 text-sm font-semibold text-gold-400 hover:text-gold-300">
-            <PhoneIcon className="h-5 w-5" aria-hidden="true" />
-            Call Harry {business.phoneDisplay}
-          </Link>
-          <Button href="/contact">
-            <ChatBubbleLeftRightIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+        <div className="hidden shrink-0 items-center lg:flex">
+          <Button href="/contact" className="min-h-10 px-5 py-2.5">
+            <ChatBubbleLeftRightIcon className="mr-2 h-4 w-4" aria-hidden="true" />
             Request Quote
           </Button>
         </div>
