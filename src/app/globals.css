@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --sap-navy-950: #020914;
+  --sap-navy-900: #061525;
+  --sap-navy-850: #082038;
+  --sap-navy-800: #0b2946;
+  --sap-blue-700: #0068ae;
+  --sap-blue-600: #0089dc;
+  --sap-blue-500: #18a8f5;
+  --sap-blue-400: #4bc1ff;
+  --sap-blue-200: #bceaff;
+  --sap-gold-700: #9b6313;
+  --sap-gold-600: #bd7c1e;
+  --sap-gold-500: #dda23c;
+  --sap-gold-400: #efc56f;
+  --sap-silver-50: #f7f9fb;
+  --sap-silver-100: #eef2f5;
+  --sap-silver-200: #dfe5ea;
+  --sap-silver-300: #c4ccd4;
+  --sap-silver-500: #7f8c99;
+  --sap-white: #ffffff;
+  --navy-950: var(--sap-navy-950);
+  --navy-900: var(--sap-navy-900);
+  --navy-800: var(--sap-navy-800);
+  --blue-700: var(--sap-blue-700);
+  --blue-600: var(--sap-blue-600);
+  --blue-500: var(--sap-blue-500);
+  --blue-300: var(--sap-blue-400);
+  --gold-600: var(--sap-gold-600);
+  --gold-500: var(--sap-gold-500);
+  --gold-400: var(--sap-gold-400);
+  --silver-100: var(--sap-silver-100);
+  --silver-300: var(--sap-silver-300);
+  --white: #ffffff;
+  --background: #ffffff;
+  --foreground: var(--sap-navy-900);
+  --muted: #536170;
+  --brand: var(--sap-blue-600);
+}
+
+@theme inline {
+  --color-navy-950: var(--navy-950);
+  --color-navy-900: var(--navy-900);
+  --color-navy-850: var(--sap-navy-850);
+  --color-navy-800: var(--navy-800);
+  --color-blue-700: var(--blue-700);
+  --color-blue-600: var(--blue-600);
+  --color-blue-500: var(--blue-500);
+  --color-blue-400: var(--sap-blue-400);
+  --color-blue-200: var(--sap-blue-200);
+  --color-gold-700: var(--sap-gold-700);
+  --color-blue-300: var(--blue-300);
+  --color-gold-600: var(--gold-600);
+  --color-gold-500: var(--gold-500);
+  --color-gold-400: var(--gold-400);
+  --color-silver-50: var(--sap-silver-50);
+  --color-silver-100: var(--silver-100);
+  --color-silver-200: var(--sap-silver-200);
+  --color-silver-300: var(--silver-300);
+  --color-silver-500: var(--sap-silver-500);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-brand: var(--brand);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-oswald);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(75, 193, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(75, 193, 255, 0.08) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+::selection {
+  background: var(--blue-300);
+  color: var(--navy-950);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

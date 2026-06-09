@@ -1,0 +1,32 @@
+# Information Still Required From Harry
+
+- Confirmed business address or service-area-only status
+- Confirmed business hours
+- Emergency call-out availability wording
+- Google Business Profile review URL
+- Current Google rating and review count
+- Approved genuine Google review quotations
+- Genuine photo of Harry
+- Additional job-site photos
+- Public liability insurance wording
+- Warranty or workmanship guarantee wording
+- Accepted payment methods
+- Preferred enquiry email delivery provider
+- Whether pricing or call-out fees should be mentioned
+- Whether commercial, strata and real-estate work should be promoted
+- Confirmation of specialist drain equipment
+- Review generated `public/images/set-apart-logo.jpg` and replace with the approved final logo export if needed
+- Review supplied `public/images/set-apart-hero-banner.png` and generated hero crops
+- Replace `public/images/set-apart-hero-banner.webp` with a final approved desktop hero export if needed
+- Replace `public/images/set-apart-hero-mobile.webp` with a final approved mobile hero crop if needed
+- Obtain 8-12 genuine high-resolution images:
+  - Harry facing camera
+  - Harry working
+  - Branded vehicle
+  - Drain-cleaning equipment
+  - Hot water system work
+  - Bathroom plumbing
+  - Kitchen plumbing
+  - Commercial plumbing
+  - Before/after drain or leak repair
+  - Clean completed job
