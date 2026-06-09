@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { business } from "@/data/business";
 import { serviceOptions, urgencyOptions } from "@/lib/quote-schema";
 
@@ -69,7 +70,7 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-2xl border border-navy-900/10 bg-white p-6 shadow-2xl ring-1 ring-white/20 sm:p-9" noValidate>
+    <form onSubmit={onSubmit} className="rounded-2xl border border-navy-900/10 bg-white p-6 text-navy-950 shadow-2xl ring-1 ring-white/20 sm:p-9" noValidate>
       <p className="mb-6 rounded-lg bg-gold-500 p-4 text-sm font-semibold text-navy-950">
         For emergencies, call 0422 131 659 rather than submitting the form.
       </p>
@@ -84,17 +85,20 @@ export function ContactForm() {
           <label className="block text-sm font-semibold text-navy-950" htmlFor="preferredContact">
             Preferred contact method
           </label>
-          <select id="preferredContact" name="preferredContact" className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm">
-            <option value="phone">Phone</option>
-            <option value="email">Email</option>
-            <option value="either">Either</option>
-          </select>
+          <div className="relative mt-2">
+            <select id="preferredContact" name="preferredContact" className="min-h-12 w-full appearance-none rounded-lg border border-navy-900/15 bg-white px-3 py-3 pr-10 text-sm text-navy-950">
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+              <option value="either">Either</option>
+            </select>
+            <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-navy-900" aria-hidden="true" />
+          </div>
         </div>
         <div className="sm:col-span-2">
           <label className="block text-sm font-semibold text-navy-950" htmlFor="message">
             Message
           </label>
-          <textarea id="message" name="message" rows={5} required className="mt-2 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm" />
+          <textarea id="message" name="message" rows={5} required className="mt-2 w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-navy-950" />
           <ErrorList errors={state.errors?.message} />
         </div>
       </div>
@@ -148,7 +152,7 @@ function TextField({
       <label className="block text-sm font-semibold text-navy-950" htmlFor={name}>
         {label}
       </label>
-      <input id={name} name={name} type={type} required={required} className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm" />
+      <input id={name} name={name} type={type} required={required} className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 bg-white px-4 py-3 text-sm text-navy-950" />
       <ErrorList errors={errors} />
     </div>
   );
@@ -170,14 +174,17 @@ function SelectField({
       <label className="block text-sm font-semibold text-navy-950" htmlFor={name}>
         {label}
       </label>
-      <select id={name} name={name} required className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm">
-        <option value="">Select an option</option>
-        {options.map((option) => (
-          <option key={option} value={option}>
-            {option}
-          </option>
-        ))}
-      </select>
+      <div className="relative mt-2">
+        <select id={name} name={name} required className="min-h-12 w-full appearance-none rounded-lg border border-navy-900/15 bg-white px-4 py-3 pr-10 text-sm text-navy-950">
+          <option value="">Select an option</option>
+          {options.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+        <ChevronDownIcon className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-navy-900" aria-hidden="true" />
+      </div>
       <ErrorList errors={errors} />
     </div>
   );
