@@ -37,8 +37,9 @@ Copy `.env.example` to `.env.local` and fill values as they become available.
 
 ```bash
 QUOTE_RECIPIENT_EMAIL=harry@setapartplumbing.com.au
+QUOTE_RECIPIENT_EMAILS=
 RESEND_API_KEY=
-QUOTE_FROM_EMAIL=
+QUOTE_FROM_EMAIL="Set Apart Plumbing <onboarding@resend.dev>"
 NEXT_PUBLIC_SITE_URL=https://setapartplumbing.com.au
 NEXT_PUBLIC_GA_ID=
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
@@ -47,8 +48,10 @@ NEXT_PUBLIC_GOOGLE_ADS_QUOTE_CONVERSION_LABEL=
 NEXT_PUBLIC_GOOGLE_ADS_CALL_CONVERSION_LABEL=
 ```
 
-The quote API validates submissions now, but does not pretend to send email
-unless an email provider is configured.
+The quote API sends submissions with Resend when `RESEND_API_KEY` is configured.
+Use `QUOTE_RECIPIENT_EMAIL` for a single inbox or `QUOTE_RECIPIENT_EMAILS` for a
+comma/semicolon-separated list. `QUOTE_FROM_EMAIL` should be changed to a
+verified sending address before launch.
 
 ## Updating Business Details
 
@@ -110,7 +113,7 @@ The project is Vercel-ready but platform-neutral. Before launch:
 
 - Configure production domain
 - Set `NEXT_PUBLIC_SITE_URL`
-- Configure quote-form email delivery
+- Configure `RESEND_API_KEY`, `QUOTE_RECIPIENT_EMAIL` and a verified `QUOTE_FROM_EMAIL`
 - Add genuine logo and hero imagery
 - Add Search Console verification
 - Submit `sitemap.xml`
