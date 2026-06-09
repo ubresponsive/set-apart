@@ -18,7 +18,8 @@ export const GOOGLE_REVIEWS_URL = "";
 
 export const navItems = [
   { label: "Services", href: "/services" },
-  { label: "About Harry", href: "/#about-harry" },
+  { label: "About Harry", href: "/about" },
+  { label: "Recent Work", href: "/recent-work" },
   { label: "Reviews", href: "/#reviews" },
   { label: "Service Areas", href: "/service-areas" },
   { label: "FAQs", href: "/#faqs" },

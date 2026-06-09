@@ -27,6 +27,8 @@ export function Footer() {
             </p>
           </div>
           <FooterColumn title="Contact">
+            <Link href="/about">About Harry</Link>
+            <Link href="/recent-work">Recent work</Link>
             <Link href={business.phoneHref}>{business.phoneDisplay}</Link>
             <Link href={`mailto:${business.email}`}>{business.email}</Link>
             <Link href={business.facebookUrl}>Facebook</Link>
