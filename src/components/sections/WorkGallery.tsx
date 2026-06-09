@@ -37,8 +37,8 @@ export function WorkGallery() {
             Practical Plumbing Work, Presented with Care
           </h2>
           <p className="mt-4 text-muted">
-            Cleaner image-first panels show distinct work scenes, with captions
-            rendered as HTML for accessibility and search.
+            A look at the kind of hands-on plumbing work Harry handles across
+            Central Coast homes and businesses.
           </p>
         </div>
         <div className="flex snap-x gap-5 overflow-x-auto pb-3 lg:grid lg:grid-cols-12 lg:overflow-visible">

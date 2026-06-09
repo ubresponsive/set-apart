@@ -1,4 +1,5 @@
 import { MapPinIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import Link from "next/link";
 import { business } from "@/data/business";
 import { serviceAreas } from "@/data/service-areas";
@@ -16,34 +17,15 @@ export function ServiceAreasSection() {
   return (
     <section className="bg-silver-50 py-24 sm:py-28">
       <Container className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
-        <div className="relative min-h-[560px] overflow-hidden rounded-2xl bg-navy-950 p-6 text-white shadow-2xl shadow-navy-950/20 lg:min-h-[620px]">
-          <div className="blueprint-grid absolute inset-0 opacity-50" aria-hidden="true" />
-          <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-400/25" />
-          <div className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full border border-blue-400/35" />
-          <div className="absolute left-1/2 top-1/2 h-32 w-32 -translate-x-1/2 -translate-y-1/2 rounded-full border border-gold-400/45" />
-          <div className="relative grid h-full place-items-center text-center">
-            <div>
-              <MapPinIcon className="mx-auto h-14 w-14 text-gold-400" aria-hidden="true" />
-              <p className="mt-4 font-display text-4xl font-semibold tracking-normal">
-                Central Coast NSW
-              </p>
-              <p className="mt-3 text-sm text-silver-300">
-                Illustrative service-area graphic
-              </p>
-            </div>
-          </div>
-          {serviceAreas.slice(0, 6).map((area, index) => (
-            <span
-              key={area.slug}
-              className="absolute rounded-lg border border-white/10 bg-white/10 px-3 py-2 text-xs font-semibold backdrop-blur"
-              style={{
-                left: `${16 + (index % 3) * 28}%`,
-                top: `${18 + Math.floor(index / 3) * 52}%`,
-              }}
-            >
-              {area.name}
-            </span>
-          ))}
+        <div className="relative overflow-hidden rounded-2xl bg-navy-950 shadow-2xl shadow-navy-950/20">
+          <Image
+            src="/images/regions.jpg"
+            alt="Central Coast NSW service area map showing Umina Beach, Woy Woy, Gosford, The Entrance, Wyong and Tuggerah"
+            width={1402}
+            height={1122}
+            sizes="(max-width: 1024px) 100vw, 54vw"
+            className="h-full w-full object-cover"
+          />
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-700">

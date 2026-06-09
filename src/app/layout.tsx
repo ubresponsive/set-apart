@@ -21,6 +21,7 @@ const oswald = Oswald({
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  applicationName: "Set Apart Plumbing",
   title: {
     default: "Plumber Central Coast NSW | Set Apart Plumbing",
     template: "%s | Set Apart Plumbing",
@@ -30,6 +31,13 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "512x512" },
+    ],
+    apple: [{ url: "/apple-icon.png", type: "image/png", sizes: "180x180" }],
+  },
   openGraph: {
     title: "Set Apart Plumbing | Central Coast Plumber",
     description:
@@ -38,6 +46,7 @@ export const metadata: Metadata = {
     siteName: "Set Apart Plumbing",
     locale: "en_AU",
     type: "website",
+    phoneNumbers: ["+61422131659"],
     images: [
       {
         url: "/opengraph-image",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
+import { SubpageHero } from "@/components/ui/SubpageHero";
 import { business } from "@/data/business";
 import { pageMetadata } from "@/lib/metadata";
 
@@ -11,12 +12,20 @@ export const metadata: Metadata = pageMetadata({
 
 export default function PrivacyPage() {
   return (
-    <main className="bg-white py-20">
-      <Container className="max-w-3xl">
+    <main className="bg-white">
+      <SubpageHero
+        eyebrow="Privacy"
+        title="Privacy Policy"
+        description="How Set Apart Plumbing handles website enquiries and contact details."
+        slug="privacy"
+        alt="Set Apart Plumbing privacy policy banner"
+        showQuoteButton={false}
+      />
+      <Container className="max-w-3xl py-20">
         {/* Have final privacy wording reviewed before launch */}
-        <h1 className="font-display text-5xl font-semibold tracking-normal text-navy-950">
+        <h2 className="font-display text-4xl font-semibold tracking-normal text-navy-950">
           Privacy Policy
-        </h1>
+        </h2>
         <div className="mt-8 space-y-6 text-sm leading-7 text-muted">
           <p>
             Set Apart Plumbing collects information submitted through website forms,

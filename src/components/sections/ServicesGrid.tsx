@@ -4,8 +4,8 @@ import {
   CloudArrowDownIcon,
   FireIcon,
   HomeModernIcon,
-  MagnifyingGlassIcon,
   PhoneArrowUpRightIcon,
+  ViewfinderCircleIcon,
   WrenchScrewdriverIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -19,7 +19,7 @@ import { ImagePanel } from "@/components/ui/ImagePanel";
 
 const iconMap = {
   "hot-water-systems": BoltIcon,
-  "leak-detection": MagnifyingGlassIcon,
+  "leak-detection": ViewfinderCircleIcon,
   "gas-fitting": FireIcon,
   "tap-toilet-repairs": WrenchScrewdriverIcon,
   "bathroom-kitchen-plumbing": HomeModernIcon,
@@ -88,8 +88,9 @@ export function ServicesGrid({ showAll = false }: { showAll?: boolean }) {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-xl border border-silver-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-xl border border-blue-200/70 bg-silver-50 p-7 shadow-[0_16px_45px_rgba(6,21,37,0.08)] transition hover:-translate-y-1 hover:border-blue-300 hover:bg-white hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 via-gold-500 to-transparent opacity-70" />
                 <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-200/0 blur-2xl transition group-hover:bg-blue-200/70" />
                 <IconBadge icon={Icon} variant="light" size="md" />
                 <h3 className="mt-6 min-h-16 font-display text-2xl font-semibold tracking-normal text-navy-950">

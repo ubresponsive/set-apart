@@ -5,8 +5,8 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ServiceJsonLd } from "@/components/seo/ServiceJsonLd";
 import { EmergencyBanner } from "@/components/sections/EmergencyBanner";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { SubpageHero } from "@/components/ui/SubpageHero";
 import { business } from "@/data/business";
 import { serviceAreas } from "@/data/service-areas";
 import { getService, services } from "@/data/services";
@@ -49,21 +49,13 @@ export default async function ServicePage({ params }: Props) {
         ]}
       />
       <ServiceJsonLd service={service} />
-      <section className="bg-navy-950 py-16 text-white">
-        <Container>
-          <p className="text-sm font-semibold uppercase tracking-wide text-gold-400">
-            {business.primaryArea}
-          </p>
-          <h1 className="mt-4 max-w-4xl font-display text-5xl font-semibold tracking-normal">
-            {service.name} Across the Central Coast
-          </h1>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-silver-300">{service.intro}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <Button href={business.phoneHref} variant="emergency">Call {business.ownerName}</Button>
-            <Button href="/contact">Request a Quote</Button>
-          </div>
-        </Container>
-      </section>
+      <SubpageHero
+        eyebrow={business.primaryArea}
+        title={`${service.name} Across the Central Coast`}
+        description={service.intro}
+        slug={service.slug}
+        alt={`Set Apart Plumbing banner for ${service.name.toLowerCase()} on the Central Coast`}
+      />
       <section className="bg-white py-20">
         <Container className="grid gap-10 lg:grid-cols-2">
           <InfoCard title="Common problems">
