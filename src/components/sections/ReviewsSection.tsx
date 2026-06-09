@@ -56,10 +56,13 @@ export function ReviewsSection() {
                 ))}
               </div>
             ) : (
-              <p className="mt-6 rounded-xl bg-white p-5 text-sm leading-6 text-muted shadow-sm">
-                Genuine customer reviews can be added once supplied. Placeholder
-                testimonials are hidden so the site never fabricates social proof.
-              </p>
+              <div className="mt-6 rounded-xl bg-white p-6 shadow-sm">
+                <p className="text-base leading-7 text-muted">
+                  Set Apart Plumbing is committed to honest advice, quality
+                  workmanship and service worth recommending. Genuine reviews will
+                  be added once supplied and approved.
+                </p>
+              </div>
             )}
             {GOOGLE_REVIEWS_URL ? (
               <Link href={GOOGLE_REVIEWS_URL} className="mt-6 inline-flex text-sm font-semibold text-blue-700">

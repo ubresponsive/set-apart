@@ -69,8 +69,11 @@ export function ContactForm() {
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-2xl border border-navy-900/10 bg-white p-6 shadow-lg sm:p-8" noValidate>
-      <div className="grid gap-5 sm:grid-cols-2">
+    <form onSubmit={onSubmit} className="rounded-2xl border border-navy-900/10 bg-white p-6 shadow-2xl ring-1 ring-white/20 sm:p-9" noValidate>
+      <p className="mb-6 rounded-lg bg-gold-500 p-4 text-sm font-semibold text-navy-950">
+        For emergencies, call 0422 131 659 rather than submitting the form.
+      </p>
+      <div className="grid gap-6 sm:grid-cols-2">
         <TextField name="name" label="Name" required errors={state.errors?.name} />
         <TextField name="suburb" label="Suburb" required errors={state.errors?.suburb} />
         <TextField name="phone" label="Phone" type="tel" errors={state.errors?.phone} />
@@ -81,7 +84,7 @@ export function ContactForm() {
           <label className="block text-sm font-semibold text-navy-950" htmlFor="preferredContact">
             Preferred contact method
           </label>
-          <select id="preferredContact" name="preferredContact" className="mt-2 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm">
+          <select id="preferredContact" name="preferredContact" className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm">
             <option value="phone">Phone</option>
             <option value="email">Email</option>
             <option value="either">Either</option>
@@ -91,7 +94,7 @@ export function ContactForm() {
           <label className="block text-sm font-semibold text-navy-950" htmlFor="message">
             Message
           </label>
-          <textarea id="message" name="message" rows={5} required className="mt-2 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm" />
+          <textarea id="message" name="message" rows={5} required className="mt-2 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm" />
           <ErrorList errors={state.errors?.message} />
         </div>
       </div>
@@ -104,9 +107,6 @@ export function ContactForm() {
         <span>I agree that Set Apart Plumbing may contact me about this enquiry.</span>
       </label>
       <ErrorList errors={state.errors?.consent} />
-      <p className="mt-5 rounded-lg bg-silver-100 p-4 text-sm font-semibold text-navy-950 sm:hidden">
-        For emergencies, call {business.phoneDisplay} rather than submitting the form.
-      </p>
       {state.status !== "idle" ? (
         <div
           className={`mt-5 rounded-lg p-4 text-sm ${
@@ -122,7 +122,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={pending}
-        className="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="mt-8 inline-flex min-h-14 w-full items-center justify-center rounded-lg bg-blue-600 px-6 py-4 text-base font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-60"
       >
         {pending ? "Checking enquiry..." : "Request a Call Back"}
       </button>
@@ -148,7 +148,7 @@ function TextField({
       <label className="block text-sm font-semibold text-navy-950" htmlFor={name}>
         {label}
       </label>
-      <input id={name} name={name} type={type} required={required} className="mt-2 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm" />
+      <input id={name} name={name} type={type} required={required} className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm" />
       <ErrorList errors={errors} />
     </div>
   );
@@ -170,7 +170,7 @@ function SelectField({
       <label className="block text-sm font-semibold text-navy-950" htmlFor={name}>
         {label}
       </label>
-      <select id={name} name={name} required className="mt-2 w-full rounded-lg border border-navy-900/15 px-3 py-3 text-sm">
+      <select id={name} name={name} required className="mt-2 min-h-12 w-full rounded-lg border border-navy-900/15 px-4 py-3 text-sm">
         <option value="">Select an option</option>
         {options.map((option) => (
           <option key={option} value={option}>

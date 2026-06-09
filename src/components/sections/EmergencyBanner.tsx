@@ -39,7 +39,7 @@ export function EmergencyBanner() {
           </p>
         </div>
         <ImagePanel
-          src="/images/jobs/service-vehicle.webp"
+          src="/images/set-apart-hero-mobile.webp"
           alt="Set Apart Plumbing branded service vehicle on the Central Coast"
           className="min-h-[380px] shadow-2xl shadow-black/30"
           imageClassName="object-cover object-[76%_center]"

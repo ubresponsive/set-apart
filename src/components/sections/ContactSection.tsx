@@ -15,7 +15,7 @@ export function ContactSection() {
     <section id="contact" className="relative overflow-hidden bg-navy-950 py-24 text-white sm:py-28">
       <div className="blueprint-grid absolute inset-0 opacity-30" aria-hidden="true" />
       <div className="absolute -right-24 top-12 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" aria-hidden="true" />
-      <Container className="relative grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+      <Container className="relative grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold-400">
             Contact Harry

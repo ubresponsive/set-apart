@@ -10,14 +10,14 @@ const panels = [
     crop: "object-[58%_center]",
   },
   {
-    title: "Emergency Plumbing",
-    src: "/images/jobs/service-vehicle.webp",
+    title: "Hot Water Servicing",
+    src: "/images/jobs/hot-water-servicing.webp",
     alt: "Set Apart Plumbing branded service vehicle on the Central Coast",
     className: "lg:col-span-5 lg:min-h-[440px]",
     crop: "object-[72%_center]",
   },
   {
-    title: "Residential & Commercial Work",
+    title: "Residential Plumbing Work",
     src: "/images/jobs/bathroom-plumbing.webp",
     alt: "Set Apart Plumbing serving residential and commercial customers",
     className: "lg:col-span-3 lg:min-h-[360px]",
@@ -31,14 +31,14 @@ export function WorkGallery() {
       <Container>
         <div className="mb-10 max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-blue-700">
-            Project-ready imagery
+          Work gallery
           </p>
           <h2 className="mt-4 font-display text-4xl font-semibold tracking-normal text-navy-950 sm:text-5xl">
             Practical Plumbing Work, Presented with Care
           </h2>
           <p className="mt-4 text-muted">
-            These panels are ready for genuine project photography. Until then,
-            they use distinct crops from the branded Set Apart visual material.
+            Cleaner image-first panels show distinct work scenes, with captions
+            rendered as HTML for accessibility and search.
           </p>
         </div>
         <div className="flex snap-x gap-5 overflow-x-auto pb-3 lg:grid lg:grid-cols-12 lg:overflow-visible">

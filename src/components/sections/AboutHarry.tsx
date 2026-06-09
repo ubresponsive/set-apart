@@ -18,7 +18,7 @@ export function AboutHarry() {
     <section id="about-harry" className="bg-silver-50 py-24 sm:py-28">
       <Container className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:items-center">
         <ImagePanel
-          src="/images/harry-profile.webp"
+          src="/images/jobs/kitchen-plumbing.webp"
           alt="Set Apart Plumbing branded plumber and service vehicle"
           className="min-h-[520px] shadow-2xl shadow-navy-950/15"
           imageClassName="object-cover object-center"

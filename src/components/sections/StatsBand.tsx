@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 
 const stats = [
   ["24/7", "Emergency Contact"],
-  ["10+", "Central Coast Areas Serviced"],
+  ["10+", "Central Coast Areas Listed"],
   ["250695C", "NSW Contractor Licence"],
   ["Residential + Commercial", "Plumbing Services"],
 ];

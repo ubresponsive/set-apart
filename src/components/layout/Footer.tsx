@@ -9,21 +9,21 @@ const footerServices = services.slice(0, 6);
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t-4 border-gold-500 bg-navy-950 pb-28 pt-16 text-white lg:pb-14">
+    <footer className="relative overflow-hidden border-t-4 border-gold-500 bg-navy-950 pb-28 pt-20 text-white lg:pb-16">
       <div className="blueprint-grid absolute inset-0 opacity-25" aria-hidden="true" />
       <Container className="relative">
-        <div className="grid gap-12 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
           <div>
-            <BrandLogo imageClassName="h-20 sm:h-24" className="inline-flex min-h-20 min-w-48" />
-            <p className="mt-6 max-w-md text-sm leading-6 text-silver-300">
+            <BrandLogo imageClassName="h-24 w-24 sm:h-28 sm:w-28" className="inline-flex min-h-24 min-w-24" />
+            <p className="mt-8 max-w-md text-base leading-7 text-silver-300">
               Set Apart Plumbing provides honest, reliable plumbing, drainage and gas
               services throughout the Central Coast.
             </p>
+            <a href={business.phoneHref} className="mt-6 inline-flex font-display text-3xl font-semibold tracking-normal text-gold-400 hover:text-gold-300">
+              {business.phoneDisplay}
+            </a>
             <p className="mt-5 font-display text-2xl font-semibold tracking-normal text-gold-400">
               {business.slogan}
-            </p>
-            <p className="mt-3 text-sm text-silver-300">
-              NSW Contractor Licence {business.licenceNumber}
             </p>
           </div>
           <FooterColumn title="Contact">
@@ -47,7 +47,12 @@ export function Footer() {
             ))}
           </FooterColumn>
         </div>
-        <div className="mt-12 border-t border-white/10 pt-6 text-sm text-silver-300">
+        <div className="mt-12 grid gap-4 border-y border-white/10 py-6 text-sm text-silver-300 sm:grid-cols-3">
+          <p><span className="font-semibold text-white">Licence:</span> NSW Contractor {business.licenceNumber}</p>
+          <p><span className="font-semibold text-white">Area:</span> Central Coast NSW</p>
+          <p><span className="font-semibold text-white">Values:</span> Faith. Integrity. Excellence.</p>
+        </div>
+        <div className="pt-6 text-sm text-silver-300">
           Copyright {new Date().getFullYear()} Set Apart Plumbing. All rights reserved.
         </div>
       </Container>

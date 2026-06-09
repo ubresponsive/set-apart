@@ -88,15 +88,15 @@ export function ServicesGrid({ showAll = false }: { showAll?: boolean }) {
               <Link
                 key={service.slug}
                 href={`/services/${service.slug}`}
-                className="group relative overflow-hidden rounded-xl border border-silver-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                className="group relative flex min-h-[250px] flex-col overflow-hidden rounded-xl border border-silver-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-blue-300 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
               >
                 <div className="absolute -right-10 -top-10 h-28 w-28 rounded-full bg-blue-200/0 blur-2xl transition group-hover:bg-blue-200/70" />
                 <IconBadge icon={Icon} variant="light" size="md" />
-                <h3 className="mt-5 font-display text-2xl font-semibold tracking-normal text-navy-950">
+                <h3 className="mt-6 min-h-16 font-display text-2xl font-semibold tracking-normal text-navy-950">
                   {service.name}
                 </h3>
-                <p className="mt-3 line-clamp-2 text-sm leading-6 text-muted">{service.shortDescription}</p>
-                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+                <p className="mt-3 line-clamp-2 text-base leading-7 text-muted">{service.shortDescription}</p>
+                <span className="mt-auto inline-flex items-center gap-2 pt-6 text-sm font-semibold text-blue-700">
                   Learn more
                   <ArrowRightIcon className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
                 </span>
