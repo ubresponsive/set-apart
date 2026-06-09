@@ -1,8 +1,8 @@
 import { CheckCircleIcon, PhoneIcon, StarIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { ImagePanel } from "@/components/ui/ImagePanel";
 
 const trustItems = [
   "NSW Licence 250695C",
@@ -10,20 +10,42 @@ const trustItems = [
   "Residential + Commercial",
 ];
 
+const heroSlides = [
+  {
+    src: "/images/new-bannerimage.png",
+    alt: "Set Apart Plumbing clearing a blocked drain outside a Central Coast home",
+    label: "Drainage & General Plumbing",
+    imageClassName: "object-[68%_center] sm:object-center",
+  },
+  {
+    src: "/images/additionalbannerimage.png",
+    alt: "Set Apart Plumbing completing bathroom tapware and vanity plumbing work",
+    label: "Bathroom Plumbing & Fit-Offs",
+    imageClassName: "object-[72%_center] sm:object-center",
+  },
+];
+
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-navy-950 text-white">
-      <ImagePanel
-        src="/images/set-apart-hero-banner.webp"
-        alt="Set Apart Plumbing serving customers across the Central Coast"
-        className="absolute inset-0 -z-10 rounded-none"
-        imageClassName="object-cover object-[72%_center] sm:object-center"
-        priority
-        sizes="100vw"
-      />
+      <div className="absolute inset-0 -z-10">
+        {heroSlides.map((slide, index) => (
+          <Image
+            key={slide.src}
+            src={slide.src}
+            alt={slide.alt}
+            fill
+            priority={index === 0}
+            sizes="100vw"
+            className={`h-full w-full object-cover ${slide.imageClassName} ${
+              index === 0 ? "animate-hero-slide-primary" : "animate-hero-slide-secondary"
+            }`}
+          />
+        ))}
+      </div>
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950 via-navy-950/78 to-navy-950/10" />
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent" />
-      <Container className="flex min-h-[680px] items-center pt-24 pb-20 sm:min-h-[740px] lg:min-h-[800px] lg:pt-28">
+      <Container className="relative flex min-h-[680px] items-center pt-24 pb-20 sm:min-h-[740px] lg:min-h-[800px] lg:pt-28">
         <div className="max-w-[680px]">
           <p className="text-xs font-bold uppercase tracking-[0.24em] text-gold-400">
             Central Coast Plumbing
@@ -63,6 +85,25 @@ export function Hero() {
               </div>
             ))}
           </div>
+        </div>
+        <div className="absolute right-4 bottom-8 hidden max-w-xs rounded-sm border border-white/15 bg-navy-950/55 p-4 shadow-2xl backdrop-blur md:block lg:right-8">
+          <p className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-gold-400">
+            Plumbing Work Gallery
+          </p>
+          <div className="mt-3 flex gap-2" aria-label="Hero service slideshow">
+            {heroSlides.map((slide, index) => (
+              <div key={slide.label} className="flex items-center gap-2">
+                <span
+                  className={`h-2 w-8 rounded-full ${index === 0 ? "animate-hero-dot-primary bg-blue-400" : "animate-hero-dot-secondary bg-white/35"}`}
+                  aria-hidden="true"
+                />
+                <span className="sr-only">{slide.label}</span>
+              </div>
+            ))}
+          </div>
+          <p className="mt-3 text-sm font-semibold leading-6 text-white">
+            Bathroom, drainage and general plumbing completed with careful workmanship.
+          </p>
         </div>
       </Container>
     </section>

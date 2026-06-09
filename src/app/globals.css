@@ -83,6 +83,84 @@ body {
   background-size: 48px 48px;
 }
 
+.animate-hero-slide-primary {
+  animation: hero-slide-primary 12s ease-in-out infinite;
+}
+
+.animate-hero-slide-secondary {
+  animation: hero-slide-secondary 12s ease-in-out infinite;
+}
+
+.animate-hero-dot-primary {
+  animation: hero-dot-primary 12s ease-in-out infinite;
+}
+
+.animate-hero-dot-secondary {
+  animation: hero-dot-secondary 12s ease-in-out infinite;
+}
+
+@keyframes hero-slide-primary {
+  0%,
+  42% {
+    opacity: 1;
+  }
+  50%,
+  92% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero-slide-secondary {
+  0%,
+  42% {
+    opacity: 0;
+  }
+  50%,
+  92% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes hero-dot-primary {
+  0%,
+  42% {
+    width: 2.5rem;
+    background-color: var(--sap-blue-400);
+  }
+  50%,
+  92% {
+    width: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  100% {
+    width: 2.5rem;
+    background-color: var(--sap-blue-400);
+  }
+}
+
+@keyframes hero-dot-secondary {
+  0%,
+  42% {
+    width: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  50%,
+  92% {
+    width: 2.5rem;
+    background-color: var(--sap-blue-400);
+  }
+  100% {
+    width: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+}
+
 ::selection {
   background: var(--blue-300);
   color: var(--navy-950);
@@ -95,5 +173,16 @@ body {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+  }
+
+  .animate-hero-slide-primary,
+  .animate-hero-dot-primary {
+    animation: none !important;
+  }
+
+  .animate-hero-slide-secondary,
+  .animate-hero-dot-secondary {
+    animation: none !important;
+    opacity: 0 !important;
   }
 }
