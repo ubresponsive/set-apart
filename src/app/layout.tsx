@@ -3,6 +3,7 @@ import { Inter, Oswald } from "next/font/google";
 import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
+import { RouteScrollManager } from "@/components/layout/RouteScrollManager";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
 import { openGraphImagePath, siteUrl } from "@/lib/metadata";
 import "./globals.css";
@@ -81,6 +82,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
+        <RouteScrollManager />
         <LocalBusinessJsonLd />
         <Header />
         <div id="main-content">{children}</div>
