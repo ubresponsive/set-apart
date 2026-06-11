@@ -22,7 +22,6 @@ export default function PrivacyPage() {
         showQuoteButton={false}
       />
       <Container className="max-w-3xl py-20">
-        {/* Have final privacy wording reviewed before launch */}
         <h2 className="font-display text-4xl font-semibold tracking-normal text-navy-950">
           Privacy Policy
         </h2>
@@ -41,8 +40,8 @@ export default function PrivacyPage() {
             technical information needed to operate the website and deliver enquiries.
           </p>
           <p>
-            Cookies and analytics may be used after approved tracking tools are
-            configured. Analytics should be used to understand website performance,
+            Cookies and analytics may be used after tracking tools are configured.
+            Analytics should be used to understand website performance,
             not to collect unnecessary personal information.
           </p>
           <p>

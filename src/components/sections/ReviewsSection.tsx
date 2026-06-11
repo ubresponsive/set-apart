@@ -59,8 +59,7 @@ export function ReviewsSection() {
               <div className="mt-6 rounded-xl bg-white p-6 shadow-sm">
                 <p className="text-base leading-7 text-muted">
                   Set Apart Plumbing is committed to honest advice, quality
-                  workmanship and service worth recommending. Genuine reviews will
-                  be added once supplied and approved.
+                  workmanship and service worth recommending across the Central Coast.
                 </p>
               </div>
             )}

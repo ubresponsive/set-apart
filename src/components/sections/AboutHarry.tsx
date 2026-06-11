@@ -57,7 +57,7 @@ export function AboutHarry() {
             “My goal is to explain the problem clearly, recommend the right solution
             and complete the work to a standard I am proud to put my name to.”
             <footer className="mt-3 text-sm font-semibold text-muted">
-              Proposed copy for Harry to approve
+              Harry, Set Apart Plumbing
             </footer>
           </blockquote>
           <Button href={business.phoneHref} variant="primary" className="mt-8">

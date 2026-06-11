@@ -22,12 +22,12 @@ export function MobileMenu() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-navy-900 hover:bg-silver-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 lg:hidden"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-white hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-400 xl:hidden"
         aria-label="Open navigation menu"
       >
         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
       </button>
-      <Dialog open={open} onClose={setOpen} className="relative z-50 lg:hidden">
+      <Dialog open={open} onClose={setOpen} className="relative z-50 xl:hidden">
         <div className="fixed inset-0 bg-navy-950/45" aria-hidden="true" />
         <div className="fixed inset-y-0 right-0 flex w-full justify-end">
           <DialogPanel className="flex h-full w-full max-w-sm flex-col bg-white p-6 shadow-xl">
