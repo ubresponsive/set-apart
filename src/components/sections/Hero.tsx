@@ -1,4 +1,4 @@
-import { CheckCircleIcon, PhoneIcon, StarIcon } from "@heroicons/react/20/solid";
+import { ChatBubbleLeftRightIcon, CheckCircleIcon, PhoneIcon, StarIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
 import { business } from "@/data/business";
 import { Container } from "@/components/ui/Container";
@@ -68,6 +68,7 @@ export function Hero() {
               Call Harry Now
             </Button>
             <Button href="/contact" variant="primary" className="w-full sm:w-auto">
+              <ChatBubbleLeftRightIcon className="mr-2 h-5 w-5" aria-hidden="true" />
               Request a Quote
             </Button>
           </div>

@@ -4,7 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Header } from "@/components/layout/Header";
 import { MobileCallBar } from "@/components/layout/MobileCallBar";
 import { LocalBusinessJsonLd } from "@/components/seo/LocalBusinessJsonLd";
-import { siteUrl } from "@/lib/metadata";
+import { openGraphImagePath, siteUrl } from "@/lib/metadata";
 import "./globals.css";
 
 const inter = Inter({
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     phoneNumbers: ["+61422131659"],
     images: [
       {
-        url: "/opengraph-image",
+        url: openGraphImagePath,
         width: 1200,
         height: 630,
         alt: "Set Apart Plumbing - Central Coast NSW",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Set Apart Plumbing | Central Coast Plumber",
     description: "Honest, reliable plumbing services across the Central Coast.",
-    images: ["/opengraph-image"],
+    images: [openGraphImagePath],
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,

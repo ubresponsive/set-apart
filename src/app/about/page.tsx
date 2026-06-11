@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CheckCircleIcon, PhoneIcon } from "@heroicons/react/20/solid";
+import { ChatBubbleLeftRightIcon, CheckCircleIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { EmergencyBanner } from "@/components/sections/EmergencyBanner";
 import { BrandedImageBanner } from "@/components/ui/BrandedImageBanner";
@@ -54,7 +54,10 @@ export default function AboutPage() {
                 <PhoneIcon className="mr-2 h-5 w-5" aria-hidden="true" />
                 Call {business.ownerName}
               </Button>
-              <Button href="/contact">Request a Quote</Button>
+              <Button href="/contact">
+                <ChatBubbleLeftRightIcon className="mr-2 h-5 w-5" aria-hidden="true" />
+                Request a Quote
+              </Button>
             </div>
           </div>
           <div className="rounded-2xl border border-silver-200 bg-silver-50 p-8 shadow-xl shadow-navy-950/10">

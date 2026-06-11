@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://setapartplumbing.com.au";
 
+export const openGraphImagePath = "/opengraph-image";
+
 export function absoluteUrl(path = "/") {
   return new URL(path, siteUrl).toString();
 }
@@ -31,7 +33,7 @@ export function pageMetadata({
       type: "website",
       images: [
         {
-          url: "/opengraph-image",
+          url: openGraphImagePath,
           width: 1200,
           height: 630,
           alt: "Set Apart Plumbing - Central Coast NSW",
@@ -42,7 +44,7 @@ export function pageMetadata({
       card: "summary_large_image",
       title,
       description,
-      images: ["/opengraph-image"],
+      images: [openGraphImagePath],
     },
   };
 }

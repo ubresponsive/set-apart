@@ -1,6 +1,7 @@
 "use client";
 
 import { Dialog, DialogPanel, DialogTitle } from "@headlessui/react";
+import { ChatBubbleLeftRightIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -73,29 +74,39 @@ export function MobileMenu() {
                 ))}
               </div>
             </div>
-            <div className="mt-auto grid gap-3 pt-8">
-              <Link
-                href={business.phoneHref}
-                className="inline-flex min-h-12 items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white"
-              >
-                Call {business.ownerName}
-              </Link>
-              <Link
-                href={business.facebookUrl}
-                className="text-center text-sm font-semibold text-blue-700"
-              >
-                Facebook
-              </Link>
-              <p className="text-center text-xs font-semibold uppercase tracking-wide text-muted">
-                NSW Licence {business.licenceNumber}
-              </p>
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="inline-flex min-h-12 items-center justify-center rounded-lg border border-navy-800/15 px-5 py-3 text-sm font-semibold text-navy-900"
-              >
-                Request a Quote
-              </Link>
+            <div className="mt-auto pt-8 pb-4">
+              <div className="grid gap-3">
+                <Link
+                  href={business.phoneHref}
+                  onClick={() => setOpen(false)}
+                  aria-label={`Call ${business.ownerName} on ${business.phoneDisplay}`}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  <PhoneIcon className="h-5 w-5" aria-hidden="true" />
+                  Call {business.ownerName}
+                </Link>
+                <Link
+                  href="/contact"
+                  onClick={() => setOpen(false)}
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  <ChatBubbleLeftRightIcon className="h-5 w-5" aria-hidden="true" />
+                  Request a Quote
+                </Link>
+              </div>
+              <div className="mt-5 border-t border-navy-900/10 pt-5 text-center">
+                <Link
+                  href={business.facebookUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-sm font-semibold text-blue-700 hover:text-blue-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Facebook
+                </Link>
+                <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-muted">
+                  NSW Licence {business.licenceNumber}
+                </p>
+              </div>
             </div>
           </DialogPanel>
         </div>
