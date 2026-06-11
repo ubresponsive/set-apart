@@ -31,7 +31,7 @@ export function MobileMenu() {
       <Dialog open={open} onClose={setOpen} className="relative z-50 xl:hidden">
         <div className="fixed inset-0 bg-navy-950/45" aria-hidden="true" />
         <div className="fixed inset-y-0 right-0 flex w-full justify-end">
-          <DialogPanel className="flex h-full w-full max-w-sm flex-col bg-white p-6 shadow-xl">
+          <DialogPanel className="flex h-full w-full max-w-sm flex-col overflow-y-auto bg-white p-6 pb-[calc(1.5rem+env(safe-area-inset-bottom))] shadow-xl">
             <div className="flex items-center justify-between">
               <DialogTitle className="font-display text-2xl font-semibold text-navy-950">
                 {business.name}
@@ -80,7 +80,7 @@ export function MobileMenu() {
                   href={business.phoneHref}
                   onClick={() => setOpen(false)}
                   aria-label={`Call ${business.ownerName} on ${business.phoneDisplay}`}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-900/20 hover:bg-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-gold-500 px-5 py-3 text-sm font-semibold text-navy-950 shadow-lg shadow-gold-600/25 hover:bg-gold-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-500"
                 >
                   <PhoneIcon className="h-5 w-5" aria-hidden="true" />
                   Call {business.ownerName}
